@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,oBAAoB;EACjC,cAAc,EAAE,MAAM;EACtB,SAAS,EAAE,IAAI;EACf,WAAW,EAAE,IAAI;EAEjB,gBAAgB,EFGC,OAAO;EEFxB,KAAK,EFPc,OAAO;CEQ3B",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/utils/_variables.scss",
+        "../sass/utils/_placeholders.scss",
+        "../sass/components/_body.scss",
+        "../sass/components/_page-header.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

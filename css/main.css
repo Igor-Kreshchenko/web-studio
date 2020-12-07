@@ -1,1 +1,15 @@
-/* No CSS */ /*# sourceMappingURL=main.css.map */
+body {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  background-color: #ffffff;
+  color: #757575;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=main.css.map */

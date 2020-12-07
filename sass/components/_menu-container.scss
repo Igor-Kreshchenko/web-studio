@@ -1,0 +1,33 @@
+.menu-container {
+  background-color: $primary-bg-color;
+  width: 100%;
+
+  @media screen and (max-width: $tablet-until) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+
+    border-top: 1px solid #ececec;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and(min-width:$tablet) {
+    display: flex;
+    align-items: center;
+
+    margin-left: 88px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-left: 93px;
+  }
+}

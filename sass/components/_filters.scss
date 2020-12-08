@@ -1,0 +1,52 @@
+.filters {
+  @extend %list;
+
+  margin-left: -4px;
+  margin-right: -4px;
+  margin-top: -8px;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: $tablet) {
+    text-align: center;
+    margin-bottom: 22px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 42px;
+  }
+}
+
+.filters__item {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.filters__button {
+  padding: 6px 22px;
+  border: 0;
+  border-radius: 4px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+
+  color: $title-text-color;
+  background-color: $light-bg-color;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    color: $primary-white-color;
+    background-color: $accent-color;
+  }
+}

@@ -32,6 +32,14 @@
     background-color: $accent-color;
     color: $primary-white-color;
   }
+
+  &--grey {
+    background-color: rgba(255, 255, 255, 0.1);
+
+    .social__icon {
+      fill: $primary-bg-color;
+    }
+  }
 }
 
 .social__icon {

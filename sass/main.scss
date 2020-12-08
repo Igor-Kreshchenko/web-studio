@@ -4,12 +4,17 @@
 
 @import './base/common';
 
-@import './components/container';
+@import './components/menu-container';
 @import './components/logo';
 @import './components/nav';
 @import './components/contacts';
 @import './components/menu-button';
 @import './components/button';
+@import './components/social';
 
 @import './layouts/header';
 @import './layouts/hero';
+@import './layouts/features';
+@import './layouts/working';
+@import './layouts/team';
+@import './layouts/clients';

@@ -45,6 +45,18 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+
+  &--grey {
+    background-color: $light-bg-color;
+  }
+
+  &--hidden {
+    padding-top: 0;
+
+    @media screen and(max-width:1199px) {
+      display: none;
+    }
+  }
 }
 
 .section-title {
@@ -63,5 +75,16 @@ img {
 
     font-size: 36px;
     line-height: 1.172;
+  }
+
+  &--hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
   }
 }

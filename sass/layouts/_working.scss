@@ -1,0 +1,29 @@
+.working {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.working__item {
+  position: relative;
+  width: calc((100% - 90px) / 3);
+  margin: 15px;
+}
+
+.working__label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 27px;
+  text-align: center;
+
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.17;
+
+  color: $primary-white-color;
+  background-color: rgba(47, 48, 58, 0.8);
+}

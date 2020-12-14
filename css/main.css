@@ -1,4 +1,4 @@
-.nav__list, .contacts, .social, .address__list, .features, .working, .team, .clients {
+.nav__list, .contacts, .social, .address__list, .modal-form__list, .features, .working, .team, .clients {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -6,6 +6,17 @@
 
 .logo, .nav__link, .contacts__link, .social__link, .address__link, .clients__link {
   text-decoration: none;
+}
+
+.checkbox__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 body {
@@ -448,6 +459,220 @@ img {
   margin-bottom: 20px;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding: 93px 15px;
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (min-width: 768px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal {
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+.modal__close-icon {
+  display: block;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal__close:hover .modal__close-icon,
+.modal__close:focus .modal__close-icon {
+  fill: #2196f3;
+}
+
+.modal__title {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.172;
+  }
+}
+
+.modal-form__list {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.modal-form__item {
+  margin-bottom: 10px;
+}
+
+.modal-form__item:last-child {
+  margin-bottom: 0;
+}
+
+.modal-form__field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__label {
+  margin-bottom: 4px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.modal-form__input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+  padding-right: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__input:hover, .modal-form__input:focus {
+  border-color: #2196f3;
+}
+
+.modal-form__icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form__input:hover + .modal-form__icon,
+.modal-form__input:focus + .modal-form__icon {
+  fill: #2196f3;
+}
+
+.modal-form__comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.modal-form__comment::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form__input--high {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.checkbox__input:checked + .checkbox__label::before {
+  background-color: #2196f3;
+  background-image: url(../images/icon-check.svg);
+  background-position: center;
+  background-size: contain;
+  background-origin: border-box;
+  border-color: #2196f3;
+}
+
+.checkbox__input:focus + .checkbox__label::before {
+  border-color: #2196f3;
+}
+
+@media screen and (max-width: 1199px) {
+  .checkbox__label {
+    font-size: 11px;
+    line-height: 1.166;
+  }
+}
+
+.checkbox__label::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.checkbox__link {
+  color: #2196f3;
 }
 
 .header {

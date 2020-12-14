@@ -23,4 +23,8 @@
     color: $accent-color;
     background-color: $primary-white-color;
   }
+
+  &--bordered {
+    border-color: $accent-color;
+  }
 }

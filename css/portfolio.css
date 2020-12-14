@@ -373,6 +373,10 @@ img {
   background-color: #ffffff;
 }
 
+.button--bordered {
+  border-color: #2196f3;
+}
+
 .social {
   display: flex;
   justify-content: center;
